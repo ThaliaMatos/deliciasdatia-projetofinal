@@ -1,0 +1,67 @@
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bg-pink {
+    box-shadow: 0 0 5px rgb(243, 55, 202);
+}
+
+/* select option {
+    background-color: black !important;
+} */
+
+select option:hover {
+    background-color: rgb(22, 178, 231) !important;
+}
+
+/*select option:checked {
+    background-color: rgb(195, 28, 210) !important;
+}*/
+
+.bg-gradient-body {
+    background: linear-gradient(135deg,#fff,#ffc1ff, #ffc1e3, #ff9ad6, #ffc1e3, #ffc1ff, #fff);
+}
+
+
+/* etilo dos ícones de redes sociais */
+
+.social-icons {
+    position: fixed; /* Fixa os ícones na tela */
+    top: 30%; /* Centraliza verticalmente */
+    right: 10px; /* Distância da borda esquerda */
+    transform: translateY(-50%); /* Ajusta o alinhamento */
+    z-index: 1000; /* Mantém os ícones sobre o conteúdo */
+}
+
+.social-icons a {
+    display: block; /* Mantém os ícones empilhados */
+    margin-bottom: 10px; /* Espaçamento entre os ícones */
+    text-align: center; /* Centraliza o conteúdo do link */
+    width: 50px; /* Tamanho do botão */
+    height: 50px; /* Tamanho do botão */
+    line-height: 50px; /* Alinha o ícone no centro */
+    background-color: #f8f9fa; /* Cor de fundo dos ícones */
+    color: #6c757d; /* Cor do ícone */
+    border-radius: 50%; /* Torna os ícones redondos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    transition: all 0.3s ease-in-out; /* Animação ao passar o mouse */
+}
+
+.social-icons a:hover {
+    background-color: #ff69b4; /* Cor ao passar o mouse */
+    color: #fff; /* Cor do ícone ao passar o mouse */
+}
+
+.card-img-top {
+    width: 100%; /* Garantir que as imagens ocupem toda a largura do card */
+    height: 400px; /* Definir a altura fixa */
+    object-fit: cover; /* Garantir que a imagem não distorça e preencha o espaço */
