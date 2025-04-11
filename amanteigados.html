@@ -15,32 +15,7 @@
 
 <body class="bg-gradient-body">
      <!-- Navegação -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-info">
-        <div class="container">
-            <a class="navbar-brand logo" href="index.html">Delicias da Tia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="cardapio.html" data-bs-toggle="dropdown">Cardápio</a>
-                        <div class="dropdown-menu bg-pink">
-                            <a class="dropdown-item" href="amanteigados.html">Amanteigados</a>
-                            <a class="dropdown-item" href="bolos.html">Bolos</a>
-                            <a class="dropdown-item" href="boloslowcarb.html">Bolos Low Carb</a>
-                            <a class="dropdown-item" href="docesespecias.html">Doces Especiais</a>
-                            <a class="dropdown-item" href="salgados.html">Salgados</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+     <div id="navbar"></div>
 
     <!-- Ícones de navegação -->
     <div class="social-icons">
@@ -68,6 +43,10 @@
                         <p class="card-text">Delicioso biscoito salgado amanteigado com um toque especial de creme,
                             cebola e orégano.</p>
                         <p class="text-primary fw-bold">R$ 5,00</p>
+
+                        <button class="btn btn-sm btn-success adicionar-ao-carrinho" data-nome="Biscoito amanteigado de cebola">
+                            <i class="bi bi-cart-plus"></i> Adicionar
+                          </button>
                     </div>
                 </div>
             </div>
@@ -80,6 +59,10 @@
                         <p class="card-text">Biscoitos amanteigados unidos por um recheio cremoso de Goiabada artesanal.
                         </p>
                         <p class="text-primary fw-bold">R$ 5,00</p>
+
+                        <button class="btn btn-sm btn-success adicionar-ao-carrinho" data-nome="Biscoito casadinho com Goiabada">
+                            <i class="bi bi-cart-plus"></i> Adicionar
+                          </button>
                     </div>
                 </div>
             </div>
@@ -88,9 +71,13 @@
                 <div class="card h-100">
                     <img src="img/biscoito coco.jpg" class="card-img-top" alt=" Biscoito de Coco">
                     <div class="card-body">
-                        <h5 class="card-title">Biscoito de Coco</h5>
+                        <h5 class="card-title">Biscoito amanteigado de Coco</h5>
                         <p class="card-text">Biscoitos crocantes e saboros feitos com coco ralado.</p>
                         <p class="text-primary fw-bold">R$ 5,00</p>
+
+                        <button class="btn btn-sm btn-success adicionar-ao-carrinho" data-nome="Biscoito amanteigado de Coco">
+                            <i class="bi bi-cart-plus"></i> Adicionar
+                          </button>
                     </div>
                 </div>
             </div>
@@ -98,10 +85,10 @@
     </div>
 
     <!-- Rodapé -->
-    <footer class="bg-info text-center py-3">
-        <p>&copy; 2024 Delícias da Tia. Todos os direitos reservados.</p>
-    </footer>
+    <div id="rodape"></div>
 
 </body>
+
+<script src="js/script.js"></script>
 
 </html>

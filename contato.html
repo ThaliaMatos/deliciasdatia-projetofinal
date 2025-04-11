@@ -15,32 +15,7 @@
 
 <body class="bg-gradient-body">
     <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
-        <div class="container">
-            <a class="navbar-brand logo" href="index.html">Delicias da Tia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="cardapio.html" data-bs-toggle="dropdown">Cardápio</a>
-                        <div class="dropdown-menu bg-pink">
-                            <a class="dropdown-item" href="amanteigados.html">Amanteigados</a>
-                            <a class="dropdown-item" href="bolos.html">Bolos</a>
-                            <a class="dropdown-item" href="boloslowcarb.html">Bolos Low Carb</a>
-                            <a class="dropdown-item" href="docesespecias.html">Doces Especiais</a>
-                            <a class="dropdown-item" href="salgados.html">Salgados</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
     <!-- Ícones de navegação -->
     <div class="social-icons">
@@ -75,7 +50,7 @@
                 <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Digite seu telefone">
             </div>
 
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="pedido" class="form-label">Tipo de Pedido:</label>
                 <select class="form-select custom-select" id="pedido" name="pedido" onfocus='this.size=10;'
                     onblur='this.size=0;' onchange='this.size=1; this.blur();'>
@@ -86,7 +61,7 @@
                     <option value="salgados">Salgados</option>
                     <option value="outros">Outros</option>
                 </select>
-            </div>
+            </div> -->
 
             <div class="mb-3">
                 <label for="mensagem" class="form-label">Mensagem:</label>
@@ -94,14 +69,15 @@
                     placeholder="Escreva sua mensagem"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-info w-100">Enviar</button>
+            <button type="submit" class="btn btn-pink w-100">Enviar</button>
         </form>
     </main>
 
     <!-- Rodapé -->
-    <footer class="bg-info text-center py-3">
-        <p>&copy; 2024 Delícias da Tia. Todos os direitos reservados.</p>
-    </footer>
+    <div id="rodape"></div>
+    
 </body>
+
+<script src="js/script.js"></script>
 
 </html>

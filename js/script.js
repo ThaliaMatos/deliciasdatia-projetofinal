@@ -3,24 +3,15 @@ const apiFakeUrl = 'https://jsonplaceholder.typicode.com/posts/1'; // Para simul
 
 // Lista de cidades para escolher aleatoriamente
 const cidades = [
-    "Tobias Barreto",
-    "Aracaju",
-    "Itabaianinha",
-    "Poço Verde",
-    "Lagoa Redonda",
-    "Tanque Novo",
-    "Lagarto",
-    "Riachão do Dantas",
-    "Itapicuru"
+    "Tobias Barreto", "Aracaju", "Itabaianinha", "Poço Verde",
+    "Lagoa Redonda", "Tanque Novo", "Lagarto", "Riachão do Dantas", "Itapicuru"
 ];
 
-// Função para selecionar uma cidade aleatória
 function escolherCidadeAleatoria() {
     const cidadeAleatoria = cidades[Math.floor(Math.random() * cidades.length)];
     return cidadeAleatoria;
 }
 
-// Função para exibir uma mensagem de receita de acordo com o clima
 function exibirReceita(clima) {
     let receita = '';
 
@@ -37,15 +28,56 @@ function exibirReceita(clima) {
     return receita;
 }
 
-// Simulando a escolha de uma cidade e exibindo a mensagem
-const cidadeEscolhida = escolherCidadeAleatoria();
+document.addEventListener('DOMContentLoaded', () => {
+    // Carrega a NAVBAR
+    fetch('/navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar a navbar:', error));
 
-// Gera uma temperatura e clima aleatório para simulação
-const temp = Math.floor(Math.random() * 35);  // Temperatura aleatória de 0 a 35°C
-const descricaoClima = ['Céu limpo', 'Chuva', 'Nublado', 'Tempestade'][Math.floor(Math.random() * 4)]; // Clima aleatório
+    // Carrega o RODAPÉ
+    fetch('/rodape.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('rodape').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar o rodapé:', error));
 
-// Exibindo os dados no elemento com id 'clima' e a receita correspondente
-document.getElementById('clima').innerText = `Em ${cidadeEscolhida}, a temperatura atual é ${temp}°C. O clima está ${descricaoClima}.`;
+    // Simula clima e receita
+    const cidadeEscolhida = escolherCidadeAleatoria();
+    const temp = Math.floor(Math.random() * 35);
+    const descricaoClima = ['Céu limpo', 'Chuva', 'Nublado', 'Tempestade'][Math.floor(Math.random() * 4)];
 
-const mensagemReceita = exibirReceita(descricaoClima);
-document.getElementById('receita').innerText = mensagemReceita;
+    const climaEl = document.getElementById('clima');
+    const receitaEl = document.getElementById('receita');
+
+    if (climaEl && receitaEl) {
+        climaEl.innerText = `Em ${cidadeEscolhida}, a temperatura atual é ${temp}°C. O clima está ${descricaoClima}.`;
+        receitaEl.innerText = exibirReceita(descricaoClima);
+    }
+});
+
+// Carrinho de compras//
+let carrinho = [];
+
+document.querySelectorAll('.adicionar-ao-carrinho').forEach(botao => {
+    botao.addEventListener('click', () => {
+        const nomeProduto = botao.getAttribute('data-nome');
+        carrinho.push(nomeProduto);
+        atualizarCarrinho();
+    });
+});
+
+function atualizarCarrinho() {
+    const contador = document.getElementById('contador-carrinho');
+    const quantidade = carrinho.length;
+
+    if (quantidade > 0) {
+        contador.textContent = quantidade;
+        contador.style.display = 'inline-block'; // mostra o contador
+    } else {
+        contador.style.display = 'none'; // esconde o contador
+    }
+}
